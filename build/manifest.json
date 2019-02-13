@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Nicophogear",
+    "description": "Nicophogear.",
+    "version": "1.0",
+    "devtools_page": "html/devtools.html",
+    "content_scripts": [{
+      "run_at": "document_end",
+      "matches": [
+        "*://*/*"
+      ],
+      "css": [],
+      "js": ["js/contents.min.js"]
+    }],
+    "background": {
+      "scripts": [
+        "js/background.min.js"
+      ]
+    },
+    "browser_action": {
+      "default_popup": "html/popup.html"
+    },
+    "permissions":  [
+      "tabs",
+      "experimental",
+      "*://*/*"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  }

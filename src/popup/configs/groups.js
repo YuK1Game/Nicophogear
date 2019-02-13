@@ -8,9 +8,12 @@ export default {
     'tags' : [
         {'name' : 'horyu', 'label' : '保留'},
         {'name' : 'sakiyomi', 'label' : '先読み'},
-        {'name' : 'yokoku', 'label' : '予告'},
         {'name' : 'zugara', 'label' : '図柄'},
         {'name' : 'rebaburu', 'label' : 'レバブル'},
+        
+        {'name' : 'reach', 'label' : 'リーチ'},
+        {'name' : '3key', 'label' : '3大キーポイント'},
+        {'name' : 'kakutei', 'label' : '確定パターン'},
 
         {'name' : 'sc-hibiki', 'label' : 'SC(響)'},
         {'name' : 'sc-tsubasa', 'label' : 'SC(翼)'},

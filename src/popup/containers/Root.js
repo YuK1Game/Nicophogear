@@ -20,11 +20,14 @@ class Root extends React.Component
     };
 
     toggleTag = ( tagString ) => {
-        if (this.getTagIndex(tagString) === false) {
-            this.addTag(tagString);
-        } else {
-            this.removeTag(tagString);
-        }
+        // if (this.getTagIndex(tagString) === false) {
+        //     this.addTag(tagString);
+        // } else {
+        //     this.removeTag(tagString);
+        // }
+
+        // 上書き
+        this.setState({ tags : [ tagString ] });
     };
 
     getTagIndex = ( tagString ) => {
@@ -71,12 +74,20 @@ class Root extends React.Component
     };
 
     handleButton = (data) => {
-        const value =  data.label + '：' + data.value;
-
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-            chrome.tabs.sendMessage(tabs[0].id, data, (response) => {
+            chrome.tabs.sendMessage(tabs[0].id, this.dataToLabel(data), (response) => {
             });
         });
+    };
+
+    dataToLabel = (data) => {
+        let value = data.label;
+        value += (data.value === 100) ? '大当たり濃厚' : (data.value + '%');
+        
+        if (data.note !== undefined) {
+            value += ' (' + data.note + ')';
+        }
+        return value;
     };
 
     render() {
@@ -115,7 +126,7 @@ class Root extends React.Component
                     <Col>
                         <ButtonToolbar>
                             {configs.get('groups').tags.map((data) => {
-                                return (
+                                return (data.relation === undefined || data.relation.indexOf(this.state.group) >= 0 ) && (
                                     <Button
                                         key={ data.name }
                                         style={ styles.button }
@@ -132,16 +143,16 @@ class Root extends React.Component
                 <Row style={ styles.row }>
                     <Col>
                         <ButtonToolbar>
-                            {this.getContents().map((data) => {
+                            {this.getContents().map((data, index) => {
                                 return this.hasTagsByArray(data.tags) && (
                                     <Button
-                                        key={ data.name }
+                                        key={ index }
                                         style={ styles.button }
                                         size={'sm'}
                                         variant={'info'}
                                         onClick={ () => this.handleButton( data ) }
                                         block={ true }
-                                        >{ data.label }：{ data.value }</Button>
+                                        >{ this.dataToLabel(data) }</Button>
                                 )
                             })}
                         </ButtonToolbar>

@@ -174,9 +174,15 @@ export default {
         {'label' : '7テンパイ', 'value' : 100, 'note' : '15R濃厚', 'tags' : ['zugara', 'kakutei']},
         {'label' : '1or5テンパイ', 'value' : 42, 'tags' : ['zugara']},
         {'label' : '2or4or6テンパイ', 'value' : 31, 'tags' : ['zugara']},
+        {'label' : 'ゴールド図柄テンパイ', 'value' : 100, 'tags' : ['zugara', 'kakutei']},
 
         {'label' : 'テンパイ煽り(ボタン)', 'value' : 47, 'tags' : ['zugara']},
         {'label' : 'テンパイ煽り(画面割れ)', 'value' : 52, 'tags' : ['zugara']},
+        {'label' : '即テンパイ', 'value' : 100, 'tags' : ['zugara', 'sc-kirishira', 'kakutei']},
+        {'label' : '予告なしテンパイ', 'value' : 46, 'tags' : ['zugara']},
+
+        {'label' : 'これが私たちの絶唱演出', 'value' : 13, 'tags' : []},
+        {'label' : 'これが私たちの絶唱演出(1回転目)', 'value' : 75, 'tags' : []},
 
         {'label' : 'レバブル(変動開始時)', 'value' : 74, 'tags' : ['rebaburu']},
 
@@ -198,6 +204,68 @@ export default {
 
         {'label' : 'キャラカットイン(赤)', 'value' : 40, 'tags' : ['chara_cutin']},
         {'label' : 'キャラカットイン(金)', 'value' : 100, 'tags' : ['chara_cutin']},
-       
+        
+        {'label' : '弦十郎orキャラ', 'value' : 45, 'tags' : ['sc-last']},
+        {'label' : 'ナターシャ', 'value' : 68, 'tags' : ['sc-last']},
+        {'label' : '未来', 'value' : 100, 'tags' : ['sc-last', 'kakutei']},
+
+        // 響モード
+        {'label' : 'モード専用(赤)', 'value' : 64, 'tags' : ['sc-hibiki']},
+        
+        {'label' : 'VS 芋虫型', 'value' : 36, 'tags' : ['sc-hibiki', 'sc-battle']},
+        {'label' : 'VS 巨人型', 'value' : 42, 'tags' : ['sc-hibiki', 'sc-battle']},
+        {'label' : 'VS 大蛙型', 'value' : 51, 'tags' : ['sc-hibiki', 'sc-battle']},
+        {'label' : 'VS 要塞型', 'value' : 62, 'tags' : ['sc-hibiki', 'sc-battle']},
+
+        {'label' : '響インパクト', 'value' : 33, 'tags' : ['sc-hibiki', 'sc-battle']},
+        {'label' : '響コンビネーション', 'value' : 40, 'tags' : ['sc-hibiki', 'sc-battle']},
+        {'label' : '響フルパワー', 'value' : 85, 'tags' : ['sc-hibiki', 'sc-battle']},
+        {'label' : 'Synchrogazer', 'value' : 100, 'tags' : ['sc-hibiki', 'sc-battle', 'kakutei']},
+        
+        // 翼モード
+        {'label' : 'モード専用(赤)', 'value' : 58, 'tags' : ['sc-tsubasa']},
+        {'label' : 'モード専用(虹)', 'value' : 100, 'note' : '15R濃厚', 'tags' : ['sc-tsubasa', 'kakutei']},
+
+        {'label' : 'VS 芋虫型', 'value' : 36, 'tags' : ['sc-tsubasa', 'sc-battle']},
+        {'label' : 'VS 巨人型', 'value' : 42, 'tags' : ['sc-tsubasa', 'sc-battle']},
+        {'label' : 'VS 大蛙型', 'value' : 51, 'tags' : ['sc-tsubasa', 'sc-battle']},
+        {'label' : 'VS 要塞型', 'value' : 62, 'tags' : ['sc-tsubasa', 'sc-battle']},
+
+        {'label' : '千ノ落涙', 'value' : 33, 'tags' : ['sc-tsubasa', 'sc-battle']},
+        {'label' : '蒼ノ一閃', 'value' : 40, 'tags' : ['sc-tsubasa', 'sc-battle']},
+        {'label' : '風林火斬', 'value' : 85, 'tags' : ['sc-tsubasa', 'sc-battle']},
+        {'label' : '滅破', 'value' : 100, 'tags' : ['sc-tsubasa', 'sc-battle', 'kakutei']},
+
+        // クリスモード
+        {'label' : '発展', 'value' : 47, 'tags' : ['sc-chris']},
+        {'label' : '発展(メーターMAX)', 'value' : 100, 'tags' : ['sc-chris', 'kakutei']},
+
+        {'label' : 'VS 芋虫型', 'value' : 32, 'tags' : ['sc-chris', 'sc-battle']},
+        {'label' : 'VS 巨人型', 'value' : 40, 'tags' : ['sc-chris', 'sc-battle']},
+        {'label' : 'VS 大蛙型', 'value' : 57, 'tags' : ['sc-chris', 'sc-battle']},
+        {'label' : 'VS 要塞型', 'value' : 71, 'tags' : ['sc-chris', 'sc-battle']},
+
+        {'label' : 'MEGA DETH PARTY', 'value' : 36, 'tags' : ['sc-chris', 'sc-battle']},
+        {'label' : 'MEGA DETH FUGA', 'value' : 85, 'tags' : ['sc-chris', 'sc-battle']},
+        {'label' : 'ARMOR PURGER', 'value' : 100, 'tags' : ['sc-chris', 'sc-battle']},
+      
+        // マリアモード
+        {'label' : '響セリフ', 'value' : 46, 'tags' : ['sc-maria']},
+        {'label' : 'セリフ(金)', 'value' : 100, 'tags' : ['sc-maria', 'kakutei']},
+
+        {'label' : 'VS 芋虫型', 'value' : 35, 'tags' : ['sc-maria', 'sc-battle']},
+        {'label' : 'VS 巨人型', 'value' : 35, 'tags' : ['sc-maria', 'sc-battle']},
+        {'label' : 'VS 大蛙型', 'value' : 57, 'tags' : ['sc-maria', 'sc-battle']},
+        {'label' : 'VS 要塞型', 'value' : 69, 'tags' : ['sc-maria', 'sc-battle']},
+
+        {'label' : 'BLACK†SHADE', 'value' : 33, 'tags' : ['sc-maria', 'sc-battle']},
+        {'label' : 'HORIZON†SEPEAR', 'value' : 71, 'tags' : ['sc-maria', 'sc-battle']},
+        {'label' : '？？？', 'value' : 100, 'tags' : ['sc-maria', 'sc-battle']},
+
+        // 切歌・調
+        {'label' : 'BGM「フィーバークィーンII」', 'value' : 100, 'tags' : ['sc-kirishira', 'sc-battle']},
+        {'label' : 'V-コントローラ', 'value' : 73, 'tags' : ['sc-kirishira', 'sc-battle']},
+        {'label' : '押して参るボタン', 'value' : 100, 'tags' : ['sc-kirishira', 'sc-battle']},
+        
     ],
 };

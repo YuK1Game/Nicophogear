@@ -43,13 +43,12 @@ export default {
         {'name' : 'sc-tsubasa', 'label' : 'SC(翼)', 'relation' : ['sc']},
         {'name' : 'sc-chris', 'label' : 'SC(クリス)', 'relation' : ['sc']},
         {'name' : 'sc-maria', 'label' : 'SC(マリア)', 'relation' : ['sc']},
-        {'name' : 'sc-kirika', 'label' : 'SC(切歌)', 'relation' : ['sc']},
-        {'name' : 'sc-shirabe', 'label' : 'SC(調)', 'relation' : ['sc']},
+        {'name' : 'sc-kirishira', 'label' : 'SC(切歌・調)', 'relation' : ['sc']},
 
         {'name' : 'action_roulette', 'label' : 'アクションルーレット', 'relation' : ['sc']},
         {'name' : 'chara_serifu', 'label' : 'キャラ決意', 'relation' : ['sc']},
         {'name' : 'chara_cutin', 'label' : 'キャラカットイン', 'relation' : ['sc']},
-        
+        {'name' : 'sc-last', 'label' : '最終変動(7回転目)', 'relation' : ['sc']},
         
         
     ],
